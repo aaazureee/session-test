@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(session({
   secret: 'work hard',
-  resave: false,
+  resave: true,
   saveUninitialized: false,
   store: new MongoStore({
     mongooseConnection: mongoose.connection
